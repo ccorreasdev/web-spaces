@@ -1,0 +1,187 @@
+@font-face {
+    font-family: "DDIN";
+    src: url("../fonts/D-DIN.woff2");
+}
+
+@font-face {
+    font-family: "DDIN-B";
+    src: url("../fonts/D-DIN-Bold.woff2");
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.layout {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #878787;
+    font-family: "DDIN";
+}
+
+.nav__layout {
+    width: 100%;
+    height: 100px;
+    background-color: #000000;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    z-index: 199;
+
+}
+
+.nav__list {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0rem 2rem;
+}
+
+.nav__item {
+    font-size: 1.3rem;
+    font-family: "DDIN-B";
+    color: white;
+    cursor: pointer;
+    position: relative;
+}
+
+.nav__item::before {
+    position: absolute;
+    content: "";
+    bottom: -2px;
+    left: 0px;
+    width: 0%;
+    height: 1px;
+    background-color: white;
+    transition: all 200ms ease-in-out;
+}
+
+.nav__item:hover::before {
+    width: 100%;
+    opacity: 1;
+}
+
+.logo__container {
+    width: 220px;
+}
+
+.logo__img {
+    width: 100%;
+}
+
+.section__1 {
+    width: 100%;
+    height: calc(100vh - 200px);
+    position: relative;
+    z-index: 1;
+}
+
+.section__2 {
+    width: 100%;
+    height: calc(100vh);
+    position: relative;
+}
+
+.img__container {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: absolute;
+    bottom: -100px;
+    left: 0px;
+}
+
+.section__img {
+    width: 100%;
+    height: 100%;
+}
+
+.left__container {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 2rem 0rem;
+    padding-left: 8rem;
+    padding-top: 8rem;
+}
+
+.left__text {
+    font-family: "DDIN-B";
+    font-size: 5rem;
+    color: white;
+}
+
+.left__button {
+    font-family: "DDIN-B";
+    font-size: 1.3rem;
+    border: none;
+    width: 150px;
+    height: 50px;
+    background-color: transparent;
+    border: solid 1px white;
+    color: white;
+    position: relative;
+    cursor: pointer;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.left__button::before {
+    position: absolute;
+    content: " ";
+    bottom: -51px;
+    left: 0px;
+    width: 100%;
+    height: 50px;
+    background-color: rgb(255, 255, 255);
+    transition: all 200ms ease-in-out;
+    z-index: 99;
+}
+
+.left__button:hover::before {
+    bottom: 0px;
+}
+
+.left__button:hover .text__button {
+    color: black;
+}
+
+.text__button {
+    color: white;
+    transition: all 200ms ease-in-out;
+    position: relative;
+
+    z-index: 99;
+}
+
+.footer__layout {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.footer__item {
+    font-size: 1.4rem;
+    font-family: "DDIN-B";
+    color: white;
+}
